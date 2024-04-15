@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Exemplo de Uso de Vídeo e Áudio</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="ufpr_negativa.png" alt="Ícone UFPR" class="icon">
+            <div class="titles">
+                <h2>Exemplo de Uso das Tags &lt;video&gt; e &lt;audio&gt;</h2>
+                <h1>Curitiba - Ônibus biarticulado</h1> 
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="example">
+            <h3>Vídeo</h3>
+            <video width="640" height="360" controls autoplay loop>
+                <source src="biarticulado.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="example">
+            <h3>Áudio</h3>
+            <!-- Adicionando imagem acima do player de áudio -->
+            <div class="audio-image">
+                <img src="biarticulado_foto.jpeg" alt="Foto do biarticulado">
+            </div>
+            <!-- Player de áudio -->
+            <audio controls>
+                <source src="biarticulado_sonotron.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; DS-122 2024-1 Desenvolvimento Web I // Diego Pujol Alvares, Eduardo Parolin da Silva e Leonardo Chicora Neto </p>
+    </footer>
+
+</body>
+
+</html>

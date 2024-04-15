@@ -1,0 +1,137 @@
+/* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Alterado */
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #00548e; /* Alterado */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.segmented-control {
+    display: flex;
+}
+
+.segmented-control input[type="radio"] {
+    display: none;
+}
+
+.segmented-control label {
+
+    font-family: 'Roboto', sans-serif; /* Alterado */
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #00548e; /* Alterado: Verde */
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+
+.segmented-control input[type="radio"]:checked + label {
+    background-color: #231f20;
+    color: #fff;
+}
+
+#descricao-algoritmo {
+    margin-bottom: 20px;
+}
+
+#descricao-algoritmo p {
+    display: none;
+    margin: 0;
+}
+
+#descricao-algoritmo p:first-child {
+    display: block;
+}
+
+/* Estilo para o canvas */
+canvas {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Estilo para o código */
+.codigo-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: auto; /* Alterado */
+    max-height: 400px; /* Adicionado */
+}
+
+footer {
+    background-color: #00548e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+  }
+  .header-content {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.titles {
+    flex-grow: 1;
+}
+
+
+.example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.example video,
+.example audio,
+.audio-image img {
+    width: 570px; /* Mesma largura do vídeo */
+    object-fit: cover; /* Garante que a imagem e o áudio cubram todo o espaço */
+}

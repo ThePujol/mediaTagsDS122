@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Notação Big-O</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="ufpr_negativa.png" alt="Ícone UFPR" class="icon">
+            <div class="titles">
+                <h2>Exemplo de Uso da tag &ltcanvas&gt no HTML5</h2>
+                <h1>Notação Big-O dos Algoritmos de Busca</h1>
+            </div>
+        </div>
+    </header>
+    
+
+    <div class="container">
+        <div>
+        
+            <div class="segmented-control">
+                <input type="radio" id="linear" name="algoritmo" value="linear" checked>
+                <label for="linear">Busca Linear</label>
+                <input type="radio" id="binaria" name="algoritmo" value="binaria">
+                <label for="binaria">Busca Binária</label>
+                <input type="radio" id="hash" name="algoritmo" value="hash">
+                <label for="hash">Tabela Hash</label>
+            </div>
+
+            <!-- Descrições detalhadas dos algoritmos -->
+            <div id="descricao-algoritmo">
+                <p id="linear-descricao" style="display:none">A busca linear é um método direto que percorre cada elemento de uma lista até encontrar o valor desejado. É fácil de entender e implementar, mas pode ser menos eficiente em listas grandes.</p>
+            
+                <p id="binaria-descricao" style="display:none">A busca binária é eficiente para encontrar um elemento em uma lista ordenada. Ela divide a lista pela metade repetidamente até encontrar o elemento desejado, tornando-a rápida para grandes conjuntos de dados.</p>
+            
+                <p id="hash-descricao" style="display:none">A tabela hash mapeia chaves para valores usando uma função hash. Oferece acesso rápido aos elementos com um tempo médio de O(1) para operações de busca, inserção e remoção, em casos raros possa ser O(n).</p>
+            </div>
+            
+
+
+            <canvas id="canvas" width="800" height="400"></canvas>
+        </div>
+
+        <div class="codigo-container" id="codigo-container">
+            <!-- Trechos de código para cada opção -->
+            <pre id="linear-codigo" style="display:none">
+                <code class="language-c">
+#include &lt;stdio.h&gt;
+
+int buscaLinear(int arr[], int n, int x) {
+    int i;
+    for (i = 0; i &lt; n; i++) {
+        if (arr[i] == x)
+            return i;
+    }
+    return -1;
+}
+
+int main(void) {
+    int arr[] = {2, 3, 4, 10, 40};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int x = 10;
+    int resultado = buscaLinear(arr, n, x);
+    if (resultado == -1)
+        printf("Elemento não encontrado");
+    else
+        printf("Elemento encontrado na posição %d", resultado);
+    return 0;
+}
+                </code>
+            </pre>
+            <pre id="binaria-codigo" style="display:none">
+                <code class="language-c">
+#include &lt;stdio.h&gt;
+
+int buscaBinaria(int arr[], int l, int r, int x) {
+    if (r &gt;= l) {
+        int mid = l + (r - l) / 2;
+        if (arr[mid] == x)
+            return mid;
+        if (arr[mid] &gt; x)
+            return buscaBinaria(arr, l, mid - 1, x);
+        return buscaBinaria(arr, mid + 1, r, x);
+    }
+    return -1;
+}
+
+int main(void) {
+    int arr[] = {2, 3, 4, 10, 40};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int x = 10;
+    int resultado = buscaBinaria(arr, 0, n - 1, x);
+    if (resultado == -1)
+        printf("Elemento não encontrado");
+    else
+        printf("Elemento encontrado na posição %d", resultado);
+    return 0;
+}
+                </code>
+            </pre>
+            <pre id="hash-codigo" style="display:none">
+                <code class="language-c">
+#include &lt;stdio.h&gt;
+
+#define TAM 10
+
+int funcaoHash(int chave) {
+    return chave % TAM;
+}
+
+int main(void) {
+    int tabelaHash[TAM];
+    for (int i = 0; i &lt; TAM; i++) {
+        tabelaHash[i] = -1;
+    }
+
+    // Inserir valores na tabela hash
+    int elementos[] = {15, 25, 35, 45, 55};
+    for (int i = 0; i &lt; sizeof(elementos) / sizeof(elementos[0]); i++) {
+        int indice = funcaoHash(elementos[i]);
+        tabelaHash[indice] = elementos[i];
+    }
+
+    // Pesquisar por um elemento na tabela hash
+    int chave = 35;
+    int indice = funcaoHash(chave);
+    if (tabelaHash[indice] == chave)
+        printf("Elemento %d encontrado na posição %d", chave, indice);
+    else
+        printf("Elemento %d não encontrado", chave);
+
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; DS-122 2024-1 Desenvolvimento Web I // Diego Pujol Alvares, Eduardo Parolin da Silva e Leonardo
+            Chicora Neto </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script>
+        // Função para desenhar o gráfico com eixos, linhas de grade e rótulos
+        function desenharGrafico(complexidade) {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Desenhar linhas de grade horizontal
+            for (let i = 1; i <= 5; i++) {
+                ctx.beginPath();
+                ctx.moveTo(50, 20 + i * 52);
+                ctx.lineTo(770, 20 + i * 52);
+                ctx.strokeStyle = '#ccc';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            // Desenhar linhas de grade vertical
+            for (let i = 1; i <= 14; i++) {
+                ctx.beginPath();
+                ctx.moveTo(50 + i * 52, 20);
+                ctx.lineTo(50 + i * 52, 380);
+                ctx.strokeStyle = '#ccc';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            // Desenhar eixos
+            ctx.beginPath();
+            ctx.moveTo(50, 20); // Eixo Y
+            ctx.lineTo(50, 380);
+            ctx.moveTo(50, 380); // Eixo X
+            ctx.lineTo(770, 380);
+            ctx.strokeStyle = '#000';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            ctx.closePath();
+
+            // Desenhar rótulos nos eixos
+            ctx.fillStyle = '#000';
+            ctx.font = '14px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Tamanho', 400, 400);
+            ctx.fillText('Tempo', 20, 15);
+
+            // Desenhar o gráfico baseado na complexidade selecionada
+            if (complexidade === 'linear') {
+                // Desenhar uma linha reta
+                ctx.beginPath();
+                ctx.moveTo(50, 350);
+                ctx.lineTo(750, 50);
+                ctx.strokeStyle = 'blue';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                ctx.closePath();
+                ctx.fillText('O(n)', 700, 70);
+            } else if (complexidade === 'binaria') {
+                // Desenhar curva logarítmica (função log2(x))
+                ctx.beginPath();
+                ctx.moveTo(50, 250); // Começa na parte superior à esquerda
+                for (let x = 50; x <= 750; x += 10) { // Alterado de 350 para 750
+                    const y = 250 - Math.log2((x - 50) / 5) * 30; // Ajuste do cálculo da coordenada Y
+                    ctx.lineTo(x, y);
+                }
+                ctx.strokeStyle = 'green';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                ctx.closePath();
+                ctx.fillText('O(log n)', 700, 70);
+            }
+
+            else if (complexidade === 'hash') {
+                // Desenhar uma linha horizontal
+                ctx.beginPath();
+                ctx.moveTo(50, 200);
+                ctx.lineTo(750, 200);
+                ctx.strokeStyle = 'red';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                ctx.closePath();
+                ctx.fillText('O(1)', 700, 180);
+            }
+
+            // Atualizar descrição do algoritmo
+            document.getElementById('linear-descricao').style.display = 'none';
+            document.getElementById('binaria-descricao').style.display = 'none';
+            document.getElementById('hash-descricao').style.display = 'none';
+            document.getElementById(`${complexidade}-descricao`).style.display = 'block';
+
+            // Atualizar código do algoritmo
+            document.getElementById('linear-codigo').style.display = 'none';
+            document.getElementById('binaria-codigo').style.display = 'none';
+            document.getElementById('hash-codigo').style.display = 'none';
+            document.getElementById(`${complexidade}-codigo`).style.display = 'block';
+
+            // Realizar destaque de sintaxe
+            Prism.highlightAll();
+        }
+
+        // Event listener para mudança na seleção do algoritmo
+        document.querySelectorAll('input[name="algoritmo"]').forEach(function (elem) {
+            elem.addEventListener('change', function () {
+                const algoritmoSelecionado = this.value;
+                desenharGrafico(algoritmoSelecionado);
+            });
+        });
+
+        // Desenhar o gráfico inicialmente com a opção padrão
+        desenharGrafico('linear');
+    </script>
+
+</body>
+
+</html>
