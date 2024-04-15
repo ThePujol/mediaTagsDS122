@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif; /* Alterado */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #00548e; /* Alterado */
+    background-color: #00548e;
     color: #fff;
     padding: 15px;
     text-align: center;
@@ -50,12 +50,11 @@ label {
 }
 
 .segmented-control label {
-
-    font-family: 'Roboto', sans-serif; /* Alterado */
+    font-family: 'Roboto', sans-serif;
     flex: 1;
     padding: 10px;
     text-align: center;
-    background-color: #00548e; /* Alterado: Verde */
+    background-color: #00548e;
     color: #fff;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
@@ -94,8 +93,8 @@ canvas {
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 8px;
-    overflow: auto; /* Alterado */
-    max-height: 400px; /* Adicionado */
+    overflow: auto;
+    max-height: 400px;
 }
 
 footer {
@@ -105,8 +104,9 @@ footer {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     margin-top: 20px;
-  }
-  .header-content {
+}
+
+.header-content {
     display: flex;
     align-items: center;
 }
@@ -121,7 +121,6 @@ footer {
     flex-grow: 1;
 }
 
-
 .example {
     display: flex;
     flex-direction: column;
@@ -134,4 +133,60 @@ footer {
 .audio-image img {
     width: 570px; /* Mesma largura do vídeo */
     object-fit: cover; /* Garante que a imagem e o áudio cubram todo o espaço */
+}
+
+/* Estilos para os botões */
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #00548e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #231f20;
+}
+
+/* Estilos para os nomes dos alunos */
+.students {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo para o nav */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00548e;
 }

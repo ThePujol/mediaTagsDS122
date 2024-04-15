@@ -5,55 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Página Inicial</title>
-    <style>
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .button {
-            padding: 20px 40px;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            background-color: #2c3e50;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-bottom: 20px;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #34495e;
-        }
-    </style>
+    <title>Comparando HTML e HTML5 com CSS2</title>
 </head>
 
 <body>
 
     <header>
         <div class="header-content">
-            <img src="ufpr_negativa.png" alt="Ícone UFPR" class="icon">
+            <a href="index.html">
+                <img src="ufpr_negativa.png" alt="Ícone UFPR" class="icon">
+            </a>
             <div class="titles">
-                <h2>Bem-vindo à Página Inicial</h2>
-                <h1>Escolha uma opção abaixo:</h1> 
+                <h2>Comparando HTML e HTML5 com CSS2</h2>
+                <nav>
+                    <ul>
+                        <li><a href="canvas.html">Canvas</a></li>
+                        <li><a href="media.html">Mídia</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
 
     <div class="container">
-        <a href="canvas.html" class="button">Ir para Página Canvas</a>
-        <a href="media.html" class="button">Ir para Página de Mídia</a>
+        <div class="task-description">
+            <h1>Demonstração de Tags HTML5</h1>
+            <p>Esta página demonstra o uso das tags HTML5 <code>&lt;canvas&gt;</code>, <code>&lt;audio&gt;</code> e
+                <code>&lt;video&gt;</code>. Cada uma dessas tags representa um avanço significativo nas capacidades do
+                HTML para lidar com gráficos dinâmicos e conteúdo multimídia.</p>
+            <p>O elemento <code>&lt;canvas&gt;</code> oferece um espaço para desenhar gráficos, animações e imagens de
+                forma programática usando JavaScript, permitindo a criação de experiências interativas e visuais
+                complexas.</p>
+            <p>O elemento <code>&lt;audio&gt;</code> permite a incorporação de arquivos de áudio diretamente na página
+                web, possibilitando a reprodução de trilhas sonoras, efeitos sonoros e podcasts sem a necessidade de
+                plugins externos.</p>
+            <p>O elemento <code>&lt;video&gt;</code> possibilita a reprodução de vídeos diretamente na página,
+                proporcionando uma experiência de visualização mais integrada e facilitando o compartilhamento de
+                conteúdo audiovisual na web.</p>
+            <p>Esses recursos são fundamentais para criar experiências web modernas e envolventes. Esta página demonstra
+                como utilizar essas tags para criar conteúdo dinâmico e interativo.</p>
+        </div>
+
+        <div class="students">
+            <p>Alunos:</p>
+            <p>Diego Pujol Alvares</p>
+            <p>Eduardo Parolin da Silva</p>
+            <p>Leonardo Chicora Neto</p>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; DS-122 2024-1 Desenvolvimento Web I // Diego Pujol Alvares, Eduardo Parolin da Silva e Leonardo Chicora Neto </p>
+        <p>&copy; DS-122 2024-1 Desenvolvimento Web I // Diego Pujol Alvares, Eduardo Parolin da Silva e Leonardo
+            Chicora Neto </p>
     </footer>
 
 </body>
