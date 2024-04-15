@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página Inicial</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .button {
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: #2c3e50;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="ufpr_negativa.png" alt="Ícone UFPR" class="icon">
+            <div class="titles">
+                <h2>Bem-vindo à Página Inicial</h2>
+                <h1>Escolha uma opção abaixo:</h1> 
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="canvas.html" class="button">Ir para Página Canvas</a>
+        <a href="media.html" class="button">Ir para Página de Mídia</a>
+    </div>
+
+    <footer>
+        <p>&copy; DS-122 2024-1 Desenvolvimento Web I // Diego Pujol Alvares, Eduardo Parolin da Silva e Leonardo Chicora Neto </p>
+    </footer>
+
+</body>
+
+</html>
