@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Exemplo de Uso de Progresso e Meter</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="ufpr_negativa.png" alt="Ícone UFPR" class="icon">
+            </a>
+            <div class="titles">
+                <h2>Novos Elementos no HTML5</h2>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="canvas.html">Canvas</a></li>
+                        <li><a href="media.html">Mídia</a></li>
+                        <li><a href="progress.html">Progresso e Meter</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+
+    <div class="container">
+        <div class="progress-container">
+            <h3>Progresso</h3>
+            <p>Exemplo de uso da tag &lt;progress&gt;:</p>
+            <p>As barras de progresso são utilizadas para indicar o progresso de uma tarefa ou operação. Podem ser
+                úteis em formulários, uploads de arquivos, carregamento de páginas, entre outros.</p>
+            <progress id="progress-bar" value="0" max="100"></progress>
+            <button class="btn" onclick="increaseProgress()">Aumentar Progresso</button>
+        </div>
+
+        <div class="progress-container">
+            <h3>Meter</h3>
+            <p>Exemplo de uso da tag &lt;meter&gt;:</p>
+            <p>A tag &lt;meter&gt; é utilizada para medir um valor em um intervalo definido. Pode ser útil para indicar
+                o nível de capacidade, a intensidade de um sinal, a temperatura, entre outros.</p>
+            <meter id="meter-bar" value="0" min="0" max="10"></meter>
+            <button class="btn" onclick="increaseMeter()">Aumentar Meter</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; DS-122 2024-1 Desenvolvimento Web I // Diego Pujol Alvares, Eduardo Parolin da Silva e Leonardo
+            Chicora Neto </p>
+    </footer>
+
+    <script>
+        function increaseProgress() {
+            var progressBar = document.getElementById("progress-bar");
+            if (progressBar.value < 100) {
+                progressBar.value += 10;
+            }
+        }
+
+        function increaseMeter() {
+            var meterBar = document.getElementById("meter-bar");
+            if (meterBar.value < 10) {
+                meterBar.value++;
+            }
+        }
+    </script>
+</body>
+
+</html>

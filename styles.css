@@ -31,7 +31,7 @@ h1 {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
@@ -143,8 +143,8 @@ footer {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 15px 30px; /* Ajuste no padding para aumentar o tamanho dos botões */
+    margin: 10px 0; /* Espaçamento entre os botões */
     text-decoration: none;
     color: #fff;
     background-color: #00548e;
@@ -189,5 +189,18 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00548e;
+    color: #868b8e;
+}
+
+/* Estilo para as barras de progresso */
+progress, meter {
+    border: 20px;
+    width: 100%;
+    height: 2rem; /* Ajuste na altura das barras */
+}
+
+/* Ajuste de tamanho dos botões para se adequarem ao tamanho das barras */
+.progress-container button {
+    padding: 15px 30px; /* Ajuste no padding para aumentar o tamanho dos botões */
+    margin: 10px 0; /* Espaçamento entre os botões */
 }

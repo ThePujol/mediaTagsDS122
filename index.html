@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <title>Comparando HTML e HTML5 com CSS2</title>
 </head>
 
@@ -16,44 +16,69 @@
                 <img src="ufpr_negativa.png" alt="Ícone UFPR" class="icon">
             </a>
             <div class="titles">
-                <h2>Comparando HTML e HTML5 com CSS2</h2>
+                <h2>Novos Elementos no HTML5</h2>
                 <nav>
                     <ul>
+                        <li><a href="index.html">Início</a></li>
                         <li><a href="canvas.html">Canvas</a></li>
                         <li><a href="media.html">Mídia</a></li>
+                        <li><a href="progress.html">Progresso e Meter</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="task-description">
+    <main>
+
+        <section>
             <h1>Demonstração de Tags HTML5</h1>
-            <p>Esta página demonstra o uso das tags HTML5 <code>&lt;canvas&gt;</code>, <code>&lt;audio&gt;</code> e
-                <code>&lt;video&gt;</code>. Cada uma dessas tags representa um avanço significativo nas capacidades do
-                HTML para lidar com gráficos dinâmicos e conteúdo multimídia.</p>
-            <p>O elemento <code>&lt;canvas&gt;</code> oferece um espaço para desenhar gráficos, animações e imagens de
-                forma programática usando JavaScript, permitindo a criação de experiências interativas e visuais
-                complexas.</p>
-            <p>O elemento <code>&lt;audio&gt;</code> permite a incorporação de arquivos de áudio diretamente na página
-                web, possibilitando a reprodução de trilhas sonoras, efeitos sonoros e podcasts sem a necessidade de
-                plugins externos.</p>
-            <p>O elemento <code>&lt;video&gt;</code> possibilita a reprodução de vídeos diretamente na página,
-                proporcionando uma experiência de visualização mais integrada e facilitando o compartilhamento de
-                conteúdo audiovisual na web.</p>
-            <p>Esses recursos são fundamentais para criar experiências web modernas e envolventes. Esta página demonstra
-                como utilizar essas tags para criar conteúdo dinâmico e interativo.</p>
-           
-        </div>
-        <div class="task-description">
+            <article>
+                <p>Esta página demonstra o uso das tags HTML5 <code>&lt;canvas&gt;</code>, <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code>. Cada uma dessas tags representa um avanço significativo nas capacidades do HTML para lidar com gráficos dinâmicos e conteúdo multimídia.</p>
+                <p>O elemento <code>&lt;canvas&gt;</code> oferece um espaço para desenhar gráficos, animações e imagens de forma programática usando JavaScript, permitindo a criação de experiências interativas e visuais complexas.</p>
+                <p>O elemento <code>&lt;audio&gt;</code> permite a incorporação de arquivos de áudio diretamente na página web, possibilitando a reprodução de trilhas sonoras, efeitos sonoros e podcasts sem a necessidade de plugins externos.</p>
+                <p>O elemento <code>&lt;video&gt;</code> possibilita a reprodução de vídeos diretamente na página, proporcionando uma experiência de visualização mais integrada e facilitando o compartilhamento de conteúdo audiovisual na web.</p>
+                <p>Esses recursos são fundamentais para criar experiências web modernas e envolventes. Esta página demonstra como utilizar essas tags para criar conteúdo dinâmico e interativo.</p>
+            </article>
+        </section>
+
+        <section>
             <h1>Trabalho apresentado na disciplina:</h1>
-            <p><strong>Disciplina:</strong> Desenvolvimento Web I</p>
-            <p><strong>Código:</strong> DS122</p>
-            <p><strong>Professor:</strong> Roberson Cesar Alves de Araujo</p>
-            <p><strong>Alunos:</strong> Diego Pujol Alvares, Eduardo Parolin da Silva, Leonardo Chicora Neto</p>
-        </div>
-    </div>
+            <article>
+                <p><strong>Disciplina:</strong> Desenvolvimento Web I</p>
+                <p><strong>Código:</strong> DS122</p>
+                <p><strong>Professor:</strong> Roberson Cesar Alves de Araujo</p>
+                <p><strong>Alunos:</strong> Diego Pujol Alvares, Eduardo Parolin da Silva, Leonardo Chicora Neto</p>
+            </article>
+        </section>
+
+        <section>
+            <h1>HTML5: Mudanças e Novidades</h1>
+            <article>
+                <h2>Novos Elementos</h2>
+                <p>Introdução de elementos semânticos como <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, entre outros, para melhor estruturação do conteúdo da página.</p>
+                <p>Adição de elementos para multimídia como <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code> e <code>&lt;track&gt;</code> para fornecer uma API que permite aos desenvolvedores de aplicativos Web criar sua própria interface do usuário.</p>
+                <p>Introdução de elementos para entrada de dados, como <code>&lt;input type="tel"&gt;</code>, <code>&lt;input type="email"&gt;</code>, <code>&lt;input type="date"&gt;</code>, etc., para melhorar a experiência do usuário.</p>
+                <p>Adição de novos elementos para representar dados e conteúdo dinâmico, como <code>&lt;progress&gt;</code>, <code>&lt;meter&gt;</code>, <code>&lt;canvas&gt;</code>, entre outros.</p>
+            </article>
+            <article>
+                <h2>Novos Atributos</h2>
+                <p>Introdução de novos atributos para elementos existentes, como <code>autofocus</code> para focar automaticamente em um campo de formulário, <code>placeholder</code> para fornecer sugestões de entrada, e <code>required</code> para indicar que um campo é obrigatório.</p>
+                <p>Melhorias nos atributos existentes para fornecer mais funcionalidades, como o uso do atributo <code>charset</code> em <code>&lt;meta&gt;</code> para especificar a codificação de caracteres e o uso de <code>min</code> e <code>max</code> em <code>&lt;input&gt;</code> para definir valores mínimos e máximos.</p>
+            </article>
+            <article>
+                <h2>Elementos e Atributos Alterados</h2>
+                <p>Alguns elementos tiveram seus significados ligeiramente modificados para melhor refletir seu uso na web, como <code>&lt;address&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;blockquote&gt;</code>, entre outros.</p>
+                <p>Mudanças nos atributos existentes para melhorar sua funcionalidade ou conformidade, como <code>alt</code> em <code>&lt;img&gt;</code> que agora tem requisitos mais elaborados e <code>accept</code> em <code>&lt;input&gt;</code> que agora aceita mais tipos de arquivos.</p>
+            </article>
+            <article>
+                <h2>Elementos e Atributos Obsoletos</h2>
+                <p>Vários elementos e atributos foram considerados obsoletos e não devem ser mais usados, como <code>&lt;basefont&gt;</code>, <code>&lt;big&gt;</code>, <code>&lt;center&gt;</code>, entre outros, devido a preocupações com acessibilidade, usabilidade e melhorias no CSS.</p>
+            </article>
+        </section>
+
+
+    </main>
 
     <footer>
         <p>&copy; DS-122 2024-1 Desenvolvimento Web I // Diego Pujol Alvares, Eduardo Parolin da Silva e Leonardo
